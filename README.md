@@ -1,1 +1,1 @@
-Test framework for libuOS
+Test application using libuOS
