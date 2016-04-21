@@ -141,16 +141,16 @@ int main(int argc, char* argv[])
     gettimeofday(&t_start, NULL);
     test1();
     gettimeofday(&t_end, NULL);
-    printf("MemMgr Test1 took\n");
-    printf("\t %lld \n", (t_end.tv_sec - t_start.tv_sec)*1000000LL + t_end.tv_usec - t_start.tv_usec);
+    printf("MemMgr Test1: ");
+    printf("%lld \n", (t_end.tv_sec - t_start.tv_sec)*1000000LL + t_end.tv_usec - t_start.tv_usec);
     MemDeInitPool();
 
     MemInitPool(pool, POOL_SIZE);
     gettimeofday(&t_start, NULL);
     test2();
     gettimeofday(&t_end, NULL);
-    printf("malloc Test2 took\n");
-    printf("\t %lld \n", (t_end.tv_sec - t_start.tv_sec)*1000000LL + t_end.tv_usec - t_start.tv_usec);
+    printf("malloc Test2: ");
+    printf("%lld \n", (t_end.tv_sec - t_start.tv_sec)*1000000LL + t_end.tv_usec - t_start.tv_usec);
     MemDeInitPool();
 
     MemInitPool(pool, POOL_SIZE);
@@ -169,8 +169,8 @@ int main(int argc, char* argv[])
     }
 
     gettimeofday(&t_end, NULL);
-    printf("MemMgr Allocations took\n");
-    printf("\t %lld \n", (t_end.tv_sec - t_start.tv_sec)*1000000LL + t_end.tv_usec - t_start.tv_usec);
+    printf("MemMgr Allocations: ");
+    printf("%lld \n", (t_end.tv_sec - t_start.tv_sec)*1000000LL + t_end.tv_usec - t_start.tv_usec);
 
     gettimeofday(&t_start, NULL);
 
@@ -185,8 +185,8 @@ int main(int argc, char* argv[])
     }
 
     gettimeofday(&t_end, NULL);
-    printf("MemMgr Free took\n");
-    printf("\t %lld \n", (t_end.tv_sec - t_start.tv_sec)*1000000LL + t_end.tv_usec - t_start.tv_usec);
+    printf("MemMgr Free: ");
+    printf("%lld \n", (t_end.tv_sec - t_start.tv_sec)*1000000LL + t_end.tv_usec - t_start.tv_usec);
 
     gettimeofday(&t_start, NULL);
 
@@ -203,8 +203,8 @@ int main(int argc, char* argv[])
     }
 
     gettimeofday(&t_end, NULL);
-    printf("malloc Allocations took\n");
-    printf("\t %lld \n", (t_end.tv_sec - t_start.tv_sec)*1000000LL + t_end.tv_usec - t_start.tv_usec);
+    printf("malloc Allocations: ");
+    printf("%lld \n", (t_end.tv_sec - t_start.tv_sec)*1000000LL + t_end.tv_usec - t_start.tv_usec);
 
     gettimeofday(&t_start, NULL);
 
@@ -219,8 +219,8 @@ int main(int argc, char* argv[])
     }
 
     gettimeofday(&t_end, NULL);
-    printf("malloc Free took\n");
-    printf("\t %lld \n", (t_end.tv_sec - t_start.tv_sec)*1000000LL + t_end.tv_usec - t_start.tv_usec);
+    printf("malloc Free: ");
+    printf("%lld \n", (t_end.tv_sec - t_start.tv_sec)*1000000LL + t_end.tv_usec - t_start.tv_usec);
     MemDeInitPool();
     return 0;
 }
